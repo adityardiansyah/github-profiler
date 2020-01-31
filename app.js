@@ -18,12 +18,13 @@ let request = https.request(options, (response) => {
         // TODO: Parse the data
         // TODO: Convert String to JSON (Javascript Object)
         let profile = JSON.parse(body)
-        console.log(profile.avatar_url)
+
+        // TODO: Print the data out
+        console.log(`${profile.login} owns ${profile.public_repos} repo(s) and has ${profile.followers} follower(s)`)
     })
 })
 
 
-// TODO: Print the data out
 
 
 request.end()
