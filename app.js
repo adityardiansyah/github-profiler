@@ -15,12 +15,13 @@ let request = https.request(options, (response) => {
         body = body + data
     })    
     response.on('end', () => {
-        console.log(body)
+        // TODO: Parse the data
+        // TODO: Convert String to JSON (Javascript Object)
+        let profile = JSON.parse(body)
+        console.log(profile.avatar_url)
     })
 })
 
-// TODO: Parse the data
-// TODO: Convert String to JSON (Javascript Object)
 
 // TODO: Print the data out
 
